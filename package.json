@@ -1,0 +1,17 @@
+{
+  "name": "webpack-tutorial",
+  "version": "1.0.0",
+  "description": "웹팩의 기본적인 개념과 설정을 공부하기 위한 레포지토리입니다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4"
+  }
+}
