@@ -8,7 +8,17 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     clean: true,
   },
-  mode: 'none',
+  mode: 'development',
+  devServer: {
+    port: 3000,
+    static: {
+      directory: path.resolve(__dirname, './dist'),
+    },
+    devMiddleware: {
+      index: 'index.html',
+      writeToDisk: true,
+    },
+  },
   module: {
     rules: [
       {

@@ -4,7 +4,7 @@
   "main": "./src/index.js",
   "license": "MIT",
   "scripts": {
-    "build": "webpack"
+    "dev": "webpack serve --config webpack.dev.config.js --hot"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",
@@ -13,7 +13,8 @@
     "handlebars-loader": "^1.7.3",
     "html-webpack-plugin": "^5.5.3",
     "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
     "handlebars": "^4.7.7"
