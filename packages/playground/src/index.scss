@@ -1,0 +1,36 @@
+#app {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  width: 700px;
+  margin: 50px auto;
+}
+
+.operands {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+
+  & > input {
+    flex-grow: 1;
+  }
+}
+
+.operators {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+
+  & > button {
+    flex-grow: 1;
+
+    background-color: skyblue;
+  }
+}
+
+.result {
+  &__error {
+    color: red;
+  }
+}

@@ -20,7 +20,7 @@ export class Result extends View {
 
   showError(message) {
     this._parent.innerHTML = `
-      <p class="results__error">${message}</p>
+      <p class="result__error">${message}</p>
     `;
   }
 
