@@ -12,7 +12,7 @@
   display: flex;
   justify-content: center;
 
-  & > input {
+  &__operand {
     flex-grow: 1;
   }
 }
@@ -22,10 +22,13 @@
   display: flex;
   justify-content: space-between;
 
-  & > button {
+  &__button {
     flex-grow: 1;
 
     background-color: skyblue;
+    &--selected {
+      background-color: blue;
+    }
   }
 }
 

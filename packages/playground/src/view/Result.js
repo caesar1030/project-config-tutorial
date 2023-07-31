@@ -6,11 +6,11 @@ export class Result extends View {
     this._operatorModel = operatorModel;
   }
 
-  showResult() {
+  template() {
     const { firstOperand, secondOperand } = this._operandsModel;
     const { operator, operation } = this._operatorModel;
 
-    this._parent.innerHTML = `
+    return `
       <p> ${firstOperand} ${operator} ${secondOperand} = ${operation(
       firstOperand,
       secondOperand
@@ -18,17 +18,13 @@ export class Result extends View {
     `;
   }
 
-  showError(message) {
-    this._parent.innerHTML = `
-      <p class="result__error">${message}</p>
-    `;
-  }
-
   render() {
     try {
-      this.showResult();
-    } catch (error) {
-      this.showError(error.message);
+      this._parent.innerHTML = this.template();
+    } catch ({ message }) {
+      this._parent.innerHTML = `
+      <p class="result__error">${message}</p>
+    `;
     }
   }
 }

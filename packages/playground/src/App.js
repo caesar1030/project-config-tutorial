@@ -35,6 +35,8 @@ export class App {
 
     operandsModel.subscribe(operandsView);
 
+    operatorModel.subscribe(operatorsView);
+
     operandsModel.subscribe(resultView);
     operatorModel.subscribe(resultView);
 

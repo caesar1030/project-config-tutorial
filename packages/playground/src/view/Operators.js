@@ -9,12 +9,13 @@ export class Operators extends View {
   }
 
   template() {
-    return `
-      <button value="${OPERATORS.PLUS}">+</button>
-      <button value="${OPERATORS.MINUS}">-</button>
-      <button value="${OPERATORS.MULTIPLY}">*</button>
-      <button value="${OPERATORS.DIVIDE}">/</button>
-    `;
+    return Object.values(OPERATORS).reduce((acc, cur) => {
+      return (acc += `<button class="${
+        this._operatorModel.operator === cur
+          ? 'operators__button operators__button--selected'
+          : 'operators__button'
+      }" value="${cur}">${cur}</button>`);
+    }, '');
   }
 
   setEvent() {
@@ -28,5 +29,9 @@ export class Operators extends View {
         this._operatorModel.operator = null;
       }
     });
+  }
+
+  render() {
+    this._parent.innerHTML = this.template();
   }
 }
