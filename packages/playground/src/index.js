@@ -1,4 +1,6 @@
-import { add } from 'calculator';
+import { App } from './App';
 
-const result = add(1, 2);
-console.log(result);
+window.addEventListener('DOMContentLoaded', () => {
+  const app = new App(document.querySelector('#app'));
+  app.init();
+});
